@@ -1,0 +1,56 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    color: white;
+    background-color: #000;
+    animation: background 1.6s infinite linear;
+}
+
+.fruitydance {
+    margin: auto;
+    background-image: url("../img/FruityDance.png"); // Debug.png
+    width: 220px;
+    height: 256px;
+    //animation: idle 0.64s infinite reverse steps(8, start);
+    background-position-y: calc(256px * 9);
+}
+
+@keyframes fruitydance {
+    from {
+        background-position-x: left;
+    }
+
+    to {
+        background-position-x: 1760px;
+    }
+}
+
+@keyframes background {
+    to {
+        background-color: #080808;
+    }
+}
+
+audio {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.paused {
+    text-shadow: white 0 0 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 0;
+    pointer-events: none;
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    transition: opacity 0.5s;
+}
